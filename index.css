@@ -28,6 +28,11 @@ body {
   border: 1px solid #b6b7b2;
 }
 
+.content-box .typing-text {
+  max-height: 255px;
+  overflow-y: auto;
+}
+
 .typing-text p {
   font-size: 21px;
   text-align: justify;
@@ -35,7 +40,35 @@ body {
   word-break: break-all;
 }
 
-.content-box .typing-text {
-  max-height: 255px;
-  overflow-y: auto;
+.typing-text::-webkit-scrollbar {
+  width: 0;
+}
+
+.content-box .content {
+  display: flex;
+  margin-top: 17px;
+  padding: 12px 0;
+  border-top: 2px solid #b6b7b2;
+  justify-content: space-between;
+}
+
+.content .result-details {
+  display: flex;
+  width: calc(100% - 140px);
+  justify-content: space-between;
+}
+
+.result-details li {
+  display: flex;
+  list-style: none;
+}
+
+.result-details li p {
+  font-size: 19px;
+}
+
+.result-details li span {
+  display: block;
+  font-size: 20px;
+  margin-left: 10px;
 }
